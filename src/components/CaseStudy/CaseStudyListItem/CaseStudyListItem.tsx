@@ -1,4 +1,4 @@
-import {HStack, VStack, Text, Heading, Divider, Grid, Image, Button, Flex} from "@chakra-ui/react";
+import {HStack, VStack, Text, Heading, Divider, Grid, Image, Button, Flex, Box} from "@chakra-ui/react";
 import {useRef} from "react";
 import {useScroll} from "framer-motion";
 import useParallax from "../../../hooks/animations/useParallax.ts";
@@ -15,8 +15,7 @@ function CaseStudyListItem({caseStudy}: {caseStudy: CaseStudy}) {
 	return (
 		<>
 			<ParallaxSection>
-				<Grid gridTemplateColumns={"1fr minmax(300px,500px)"}
-				      px={10} gap={20} maxHeight={"90vh"}>
+				<Grid gridTemplateColumns={"1fr minmax(300px,500px)"} px={10} gap={20} maxHeight={"90vh"}>
 					<VStack
 						maxW={"700px"} w={"100%"}
 						justifyContent={"center"}
@@ -60,6 +59,9 @@ function CaseStudyListItem({caseStudy}: {caseStudy: CaseStudy}) {
 						<Image src={caseStudy.image} alt={caseStudy.imageDescription}/>
 					</VStack>
 				</Grid>
+				<Box position={"absolute"} left={"0"} bottom="0" w="100%" h="100vh">
+					{caseStudy.render()}
+				</Box>
 			</ParallaxSection>
 		</>
 	)

@@ -5,7 +5,7 @@ function CaseStudyTags({tags}: {tags: string[]}) {
 		<>
 			<Flex gap={2} flexWrap={"wrap"}>
 			{
-				tags.map((tag) => <Badge>{tag}</Badge>)
+				tags.map((tag) => <Badge key={tag}>{tag}</Badge>)
 			}
 			</Flex>
 		</>

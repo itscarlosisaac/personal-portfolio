@@ -2,7 +2,7 @@ import {ReactNode, useRef} from 'react'
 import {useScroll} from "framer-motion";
 import useParallax from "../../hooks/animations/useParallax.ts";
 import {Grid} from "@chakra-ui/react";
-
+import DynamicSvgPath from "../Background/DynamicSvgPath.tsx";
 function ParallaxSection({children, containerProps}: {children: ReactNode, containerProps?: any}) {
 	const ref = useRef(null);
 	const { scrollYProgress } = useScroll({ target: ref });
@@ -11,6 +11,7 @@ function ParallaxSection({children, containerProps}: {children: ReactNode, conta
 	return (
 		<>
 			<Grid
+				w={"100%"}
 				h={"100vh"}
 				sx={{
 					"scroll-snap-align": "center",
@@ -20,6 +21,7 @@ function ParallaxSection({children, containerProps}: {children: ReactNode, conta
 				alignContent={"center"}
 				justifyContent={"center"}
 				as={"section"}
+				position={"relative"}
 				{...containerProps}
 			>
 				{children}

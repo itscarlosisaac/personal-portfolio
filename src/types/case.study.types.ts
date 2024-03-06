@@ -8,4 +8,5 @@ export type CaseStudy = {
 	imageDescription: string
 	url: string
 	tags: string[]
+	render: () => JSX.Element
 }

@@ -11,7 +11,7 @@ function NavigationMenuList() {
 			h={"100%"}
 		>
 		{
-			[0,1,2,3,4].map(() => <NavigationMenuListItem />)
+			[0,1,2,3,4].map((i) => <NavigationMenuListItem key={i} />)
 		}
 		</VStack>
 	)

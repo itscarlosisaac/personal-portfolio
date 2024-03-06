@@ -3,16 +3,20 @@ import CaseStudyContainer from "../components/CaseStudy/CaseStudyContainer.tsx";
 import NavigationContainer from "../components/Navigation/NavigationContainer.tsx";
 import HeroBanner from "../components/HeroBanner/HeroBanner.tsx";
 import Contact from "../components/Contact/Contact.tsx";
+import MascotContainer from "../components/Mascot/MascotContainer.tsx";
+import NavigatorHandle from "../components/NavigatorHandle/NavigatorHandle.tsx";
 
 function HomeView() {
 	return (
-		<Grid w={"100vw"} gridTemplateColumns={"80px 1fr"}>
+		<Grid w={"100vw"} gridTemplateColumns={"80px 1fr"} position={"relative"}>
 			<NavigationContainer />
-			<VStack maxWidth={"1600px"} margin={"0 auto"}>
+			<NavigatorHandle />
+			<VStack >
 				<HeroBanner />
 				<CaseStudyContainer />
 				<Contact />
 			</VStack>
+			<MascotContainer/>
 		</Grid>
 	)
 }

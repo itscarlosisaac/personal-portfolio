@@ -1,6 +1,5 @@
 import ParallaxSection from "../Parallax/ParallaxSection.tsx";
 import {HStack, Heading} from "@chakra-ui/react";
-
 function HeroBanner() {
 	return (
 		<>
@@ -9,6 +8,9 @@ function HeroBanner() {
 					w: "100%",
 					px: 20,
 					justifyContent: "flex-start",
+					bg: 'url("/bg.svg")',
+					bgSize: "cover",
+					bgPosition: "center",
 				}
 			}>
 				<HStack w={"100%"}>
@@ -22,3 +24,4 @@ function HeroBanner() {
 }
 
 export default HeroBanner
+
