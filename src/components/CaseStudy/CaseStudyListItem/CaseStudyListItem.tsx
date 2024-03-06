@@ -60,7 +60,9 @@ function CaseStudyListItem({caseStudy}: {caseStudy: CaseStudy}) {
 						</VStack>
 					</VStack>
 					<VStack>
-						<Image src={caseStudy.image} alt={caseStudy.imageDescription}/>
+						<Image
+							boxShadow={"rgba(0, 0, 0, 0.2) 0px 25px 20px -20px;"}
+							src={caseStudy.image} alt={caseStudy.imageDescription}/>
 					</VStack>
 				</Grid>
 				<Box zIndex={-1} position={"absolute"} left={"0"} bottom="0" w="100%" h="100vh" pointerEvents={"none"}>

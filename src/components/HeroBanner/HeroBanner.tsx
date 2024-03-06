@@ -5,6 +5,7 @@ function HeroBanner() {
 		<>
 			<ParallaxSection containerProps={
 				{
+					id: "hero-banner",
 					w: "100%",
 					px: 20,
 					justifyContent: "flex-start",
