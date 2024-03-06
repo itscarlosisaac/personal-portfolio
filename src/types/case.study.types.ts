@@ -5,6 +5,7 @@ export type CaseStudy = {
 	description: string
 	date: string
 	image: string
+	imageDescription: string
 	url: string
 	tags: string[]
 }

@@ -1,11 +1,11 @@
 import CaseStudyListItem from "./CaseStudyListItem/CaseStudyListItem.tsx";
+import case_studies_list from "../../data/CaseStudy.ts";
 
 function CaseStudyList() {
-	const list = [1,2,3,4,5]
 	return (
 		<>
 			{
-				list.map((v) => <CaseStudyListItem id={v} />)
+				case_studies_list.map((caseStudy) => <CaseStudyListItem caseStudy={caseStudy} />)
 			}
 		</>
 	)

@@ -1,7 +1,7 @@
 import ParallaxSection from "../Parallax/ParallaxSection.tsx";
 import {HStack, Heading} from "@chakra-ui/react";
 
-function Hero() {
+function HeroBanner() {
 	return (
 		<>
 			<ParallaxSection containerProps={
@@ -21,4 +21,4 @@ function Hero() {
 	)
 }
 
-export default Hero
+export default HeroBanner
