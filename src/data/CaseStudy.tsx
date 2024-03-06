@@ -4,15 +4,17 @@ import DynamicSvgPath from "../components/Background/DynamicSvgPath.tsx";
 const case_studies_list: CaseStudy[] = [
 	{
 		id: 1,
-		title: "Case Study 1",
+		title: "Cargo Application",
 		description: "Description for case study 1",
 		date: "2021-01-01",
 		image: "https://placekitten.com/500/500/",
 		imageDescription: "Image description for case study 1",
-		url: "https://placekitten.com/500/500/",
-		tags: ["react", "node", "electron"],
+		url: "https://kitbash3d.com/pages/cargo",
+		tags: ["react", "node", "electron", "redux", "typescript", "graphql", "C#", ".NET", "SQL", ],
+		color: "#86EDC3",
 		render: () => <>
 			<DynamicSvgPath
+				color={"#86EDC3"}
 				start={{ x: 0, y: 450 }}
 				points={[
 					{ type: 'V', y: 552 },
@@ -25,13 +27,14 @@ const case_studies_list: CaseStudy[] = [
 	},
 	{
 		id: 2,
-		title: "Case Study 2",
+		title: "Ecommerce Website",
 		description: "Description for case study 1",
 		date: "2021-01-01",
 		image: "https://placekitten.com/500/500/",
 		imageDescription: "Image description for case study 2",
-		url: "https://placekitten.com/500/500/",
+		url: "https://kitbash3d.com/",
 		tags: ["html5", "CSS3", "SASS", "javascript", "liquid api", "shopify", "grapql", "responsive design", "rest api"],
+		color: "#EA937A",
 		render: () => <>
 			<DynamicSvgPath
 				color={"#EA937A"}

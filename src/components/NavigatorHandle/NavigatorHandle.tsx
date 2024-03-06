@@ -16,13 +16,14 @@ function NavigatorHandle() {
 	return (
 		<>
 			<Flex
+				zIndex={1000}
 				h={"60px"}
 				w={"40px"}
 				borderRadius={"100px"}
 				border={"2px solid"}
-				borderColor={"#86EDC3"}
+				borderColor={"white"}
 				position={"fixed"}
-				bottom={14}
+				bottom={6}
 				left={"50%"}
 				justifyContent={"center"}
 				alignItems={"flex-end"}
@@ -38,8 +39,8 @@ function NavigatorHandle() {
 						y: [-5,-20,-5],
 					}}>
 					<Box
-						opacity={.4}
-						w={"8px"} h={"16px"} borderRadius={"100px"} bg={"#0175A2"} />
+						opacity={1}
+						w={"8px"} h={"16px"} borderRadius={"100px"} bg={"white"} />
 					{/*<ArrowDownIcon color={"#0175A2"} boxSize={5} />*/}
 				</motion.div>
 			</Flex>

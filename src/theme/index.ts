@@ -11,6 +11,14 @@ Abbey #474A51
  */
 const overwrites = {
 	components: {
+		Button: {
+			baseStyle: {
+				borderRadius: 0,
+				h: "42px",
+				textTransform: "uppercase",
+				letterSpacing: "1px",
+			}
+		},
 		Heading: {
 			baseStyle: {
 				fontFamily:'"Montserrat", sans-serif',

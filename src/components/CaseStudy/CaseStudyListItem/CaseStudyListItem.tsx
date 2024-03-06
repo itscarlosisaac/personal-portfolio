@@ -38,7 +38,7 @@ function CaseStudyListItem({caseStudy}: {caseStudy: CaseStudy}) {
 								</Heading>
 							</VStack>
 						</HStack>
-						<Divider w={"70px"} my={5} border={"3px solid"} borderColor={"brown"}/>
+						<Divider w={"70px"} my={5} opacity={1} border={"2px solid"} borderColor={caseStudy.color}/>
 						<VStack as={"article"} alignItems={"flex-start"} gap={5}>
 							<Text>{caseStudy.description}</Text>
 							<CaseStudyTags tags={caseStudy.tags} />
@@ -46,10 +46,12 @@ function CaseStudyListItem({caseStudy}: {caseStudy: CaseStudy}) {
 								href={caseStudy.url} target={"_blank"} rel={"noopener noreferrer"}
 								justifyContent={"space-between"}
 								as={"a"} borderRadius={"0"} size={"md"} p={0}
-								pl={4} h={"42px"}
-								w={"160px"} cursor={"pointer"}>
+								pl={4} h={"42px"} fontSize={"14px"}
+								minW={"160px"} cursor={"pointer"}>
 								<span>view project </span>
-								<Flex justifyContent={"center"} alignItems={"center"} h={"100%"} w={"40px"} bg={"red"}>
+								<Flex
+									ml={4}
+									justifyContent={"center"} alignItems={"center"} h={"100%"} w={"40px"} bg={"red"}>
 									<ArrowForwardIcon boxSize={"20px"} />
 								</Flex>
 							</Button>
@@ -59,7 +61,7 @@ function CaseStudyListItem({caseStudy}: {caseStudy: CaseStudy}) {
 						<Image src={caseStudy.image} alt={caseStudy.imageDescription}/>
 					</VStack>
 				</Grid>
-				<Box position={"absolute"} left={"0"} bottom="0" w="100%" h="100vh">
+				<Box zIndex={-1} position={"absolute"} left={"0"} bottom="0" w="100%" h="100vh" pointerEvents={"none"}>
 					{caseStudy.render()}
 				</Box>
 			</ParallaxSection>

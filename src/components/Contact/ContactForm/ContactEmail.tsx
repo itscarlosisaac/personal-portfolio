@@ -1,4 +1,4 @@
-import {VStack, Text, Heading} from "@chakra-ui/react";
+import {VStack, Text, Heading, Box} from "@chakra-ui/react";
 
 function ContactEmail() {
 	return (
@@ -6,14 +6,14 @@ function ContactEmail() {
 			<VStack
 				px={10} w={"100%"}
 				maxW={"490px"} alignItems={"flex-start"}>
-				<Text>Or Send an email to:</Text>
+				<Text fontFamily={"body"}  fontWeight={500}>Or Send an email to:</Text>
 				<Heading
 					fontFamily={'"Montserrat Subrayada", "sans-serif"'}
-					size={"2xl"} as={"h2"}>
-					<Text as={"a"}  href={"mailto:itscarlosisaac@gmail.com"} lineHeight={"90%"}>
-						<Text whiteSpace={"nowrap"}>Itscarlosisaac</Text>
-						<Text>@gmail.com</Text>
-					</Text>
+					size={"2xl"} as={"h2"} fontWeight={600}>
+					<Box as={"a"}  href={"mailto:itscarlosisaac@gmail.com"} lineHeight={"90%"}>
+						<Box whiteSpace={"nowrap"}>Itscarlosisaac</Box>
+						<Box>@gmail.com</Box>
+					</Box>
 				</Heading>
 			</VStack>
 		</>
