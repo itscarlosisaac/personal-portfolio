@@ -2,11 +2,8 @@ import { extendTheme } from '@chakra-ui/react'
 
 /*/
 Downy #56C9C2
-
 Apricot #EA937A
-
 Haiti #08061C
-
 Abbey #474A51
  */
 const overwrites = {

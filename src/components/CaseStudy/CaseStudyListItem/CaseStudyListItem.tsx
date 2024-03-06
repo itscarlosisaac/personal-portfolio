@@ -14,7 +14,9 @@ function CaseStudyListItem({caseStudy}: {caseStudy: CaseStudy}) {
 	
 	return (
 		<>
-			<ParallaxSection>
+			<ParallaxSection containerProps={{
+				id: `case-study-${caseStudy.slug}`,
+			}}>
 				<Grid gridTemplateColumns={"1fr minmax(300px,500px)"} px={10} gap={20} maxHeight={"90vh"}>
 					<VStack
 						maxW={"700px"} w={"100%"}
@@ -46,13 +48,13 @@ function CaseStudyListItem({caseStudy}: {caseStudy: CaseStudy}) {
 								href={caseStudy.url} target={"_blank"} rel={"noopener noreferrer"}
 								justifyContent={"space-between"}
 								as={"a"} borderRadius={"0"} size={"md"} p={0}
-								pl={4} h={"42px"} fontSize={"14px"}
+								pl={4} h={"44px"} fontSize={"14px"}
 								minW={"160px"} cursor={"pointer"}>
 								<span>view project </span>
 								<Flex
-									ml={4}
-									justifyContent={"center"} alignItems={"center"} h={"100%"} w={"40px"} bg={"red"}>
-									<ArrowForwardIcon boxSize={"20px"} />
+									ml={4}  bg={"#08061C"}
+									justifyContent={"center"} alignItems={"center"} h={"100%"} w={"40px"}>
+									<ArrowForwardIcon boxSize={"20px"} color={"white"} />
 								</Flex>
 							</Button>
 						</VStack>

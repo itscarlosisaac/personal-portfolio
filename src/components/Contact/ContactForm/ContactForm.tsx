@@ -1,15 +1,21 @@
-import {Button, FormControl, FormErrorMessage, FormLabel, Input, Textarea, VStack} from "@chakra-ui/react";
-import {ViewIcon} from "@chakra-ui/icons";
+import {Button, Flex, FormControl, FormErrorMessage, FormLabel, Input, Textarea, VStack} from "@chakra-ui/react";
+import RocketIcon from "../../Icons/RocketIcon.tsx";
 
 function ContactForm() {
 	return (
 		<>
 			<VStack
 				as={"form"} w={"100%"} >
-				<FormControl>
-					<FormLabel>Name</FormLabel>
-					<Input type='name' placeholder={"John Hammond"} />
-				</FormControl>
+				<Flex gap={4}>
+					<FormControl>
+						<FormLabel>Name</FormLabel>
+						<Input type='text' placeholder={"John Hammond"} />
+					</FormControl>
+					<FormControl>
+						<FormLabel>Subject</FormLabel>
+						<Input type='text' placeholder={"Park breakout"} />
+					</FormControl>
+				</Flex>
 				<FormControl>
 					<FormLabel>Email address</FormLabel>
 					<Input type='email' placeholder={"jonh.hammond@jpark.com"} />
@@ -30,7 +36,7 @@ function ContactForm() {
 					sx={{_hover: { bg: '#3d918d' }}}
 				>
 					<span>Send Message</span>
-					<ViewIcon boxSize={4} />
+					<RocketIcon boxSize={8} color={"white"} />
 				</Button>
 			</VStack>
 		</>

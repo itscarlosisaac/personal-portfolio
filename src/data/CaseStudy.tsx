@@ -4,6 +4,7 @@ import DynamicSvgPath from "../components/Background/DynamicSvgPath.tsx";
 const case_studies_list: CaseStudy[] = [
 	{
 		id: 1,
+		slug: 'cargo-application',
 		title: "Cargo Application",
 		description: "Description for case study 1",
 		date: "2021-01-01",
@@ -27,6 +28,7 @@ const case_studies_list: CaseStudy[] = [
 	},
 	{
 		id: 2,
+		slug: "eccomerce-website",
 		title: "Ecommerce Website",
 		description: "Description for case study 1",
 		date: "2021-01-01",

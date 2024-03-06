@@ -1,5 +1,7 @@
 import NavigationMenuListItem from "./NavigationMenuListItem.tsx";
-import {VStack} from "@chakra-ui/react";
+import {VStack, Text} from "@chakra-ui/react";
+import case_studies_list from "../../data/CaseStudy.tsx";
+import MailIcon from "../Icons/MailIcon.tsx";
 
 function NavigationMenuList() {
 	
@@ -11,8 +13,28 @@ function NavigationMenuList() {
 			h={"100%"}
 		>
 		{
-			[0,1,2,3,4].map((i) => <NavigationMenuListItem key={i} />)
+			case_studies_list.map((caseStudy) =>
+				<NavigationMenuListItem
+					caseStudy={caseStudy}
+					key={caseStudy.id} />
+			)
 		}
+			<Text
+				onClick={() => {
+					document.querySelector("#contact")?.scrollIntoView({ behavior: 'smooth' });
+				}}
+				cursor={"pointer"}
+				fontWeight={"700"}
+				fontFamily={"Montserrat"}
+				transition={"all easeIn 0.4s"}
+				sx={{
+					_hover: {
+						color: "#86EDC3"
+					}
+				}}
+			>
+				<MailIcon boxSize={6} />
+			</Text>
 		</VStack>
 	)
 }

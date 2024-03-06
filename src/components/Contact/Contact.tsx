@@ -6,7 +6,11 @@ import {Box} from "@chakra-ui/react";
 function Contact() {
 	return (
 		<>
-			<ParallaxSection>
+			<ParallaxSection
+				containerProps={{
+					id: "contact",
+				}}
+			>
 				<ContactFormContainer />
 				<Box zIndex={-1} position={"absolute"} left={"0"} bottom="0" w="100%" h="100vh" pointerEvents={"none"}>
 					<DynamicSvgPath
