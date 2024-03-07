@@ -17,6 +17,7 @@ function AboutSection() {
 				>
 					<VStack
 						alignItems={"flex-start"}
+						justifyContent={"center"}
 					>
 						<Heading as={"h2"}>Hi,</Heading>
 						<Heading as={"h3"}>
