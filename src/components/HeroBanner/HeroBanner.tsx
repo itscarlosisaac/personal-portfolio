@@ -15,7 +15,11 @@ function HeroBanner() {
 				}
 			}>
 				<HStack w={"100%"}>
-					<Heading as='h1' size='2xl' noOfLines={3} fontFamily={'"Montserrat Subrayada", "sans-serif"'}>
+					<Heading
+						as='h1'
+						noOfLines={{base: 5, md: 3}}
+						fontSize={{ base: "xl", sm:"4xl", md: "5xl"}}
+						fontFamily={'"Montserrat Subrayada", "sans-serif"'}>
 						Elevating User <br/>Experience through <br/>Crafted Code.
 					</Heading>
 				</HStack>

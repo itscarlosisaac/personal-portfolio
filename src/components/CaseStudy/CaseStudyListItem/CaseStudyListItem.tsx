@@ -17,24 +17,38 @@ function CaseStudyListItem({caseStudy}: {caseStudy: CaseStudy}) {
 			<ParallaxSection containerProps={{
 				id: `case-study-${caseStudy.slug}`,
 			}}>
-				<Grid gridTemplateColumns={"1fr minmax(300px,500px)"} px={10} gap={20} maxHeight={"90vh"}>
+				<Grid
+					px={{base: 5, md: 8, lg: 10}}
+					gap={{base: 4, md: 6, lg: 20}}
+					maxHeight={"90vh"}
+					gridTemplateColumns={{base: "1fr", md:"1fr auto", lg: "1fr minmax(300px,500px)"}}
+				>
 					<VStack
 						maxW={"700px"} w={"100%"}
 						justifyContent={"center"}
 						alignItems={"flex-start"}
 						as={"article"}>
 						<HStack>
-							<VStack  fontWeight={"900"} alignItems={"center"}>
+							<VStack fontWeight={"900"} alignItems={"center"}>
 								<Heading
-									fontSize={"14px"} fontWeight={"800"} letterSpacing={"0.18em"}
+									fontSize={{base: "7px", md: "10px", lg: "14px"}}
+									fontWeight={"800"}
+									letterSpacing={"0.18em"}
 									textTransform={"uppercase"}>Case Study</Heading>
-								<Heading fontSize={"120px"} lineHeight="80px" fontWeight={"700"} >
+								<Heading
+									lineHeight={{base: "30px", md: "60px", lg: "80px"}}
+									fontSize={{base: "60px", md: "80px", lg: "120px"}}
+									fontWeight={"700"} >
 									{caseStudy.id.toString().padStart(2, "0")}
 								</Heading>
 							</VStack>
 							<VStack maxWidth={"450px"} pt={7}>
 								<Heading
-									fontWeight={"700"} fontSize={"40px"} lineHeight={"90%"} letterSpacing={"0.01em"}
+									maxW={"100%"}
+									fontWeight={"700"}
+									fontSize={{base: "24px", md: "30px" , lg: "40px"}}
+									lineHeight={"90%"}
+									letterSpacing={"0.01em"}
 									textTransform={"uppercase"} >
 									{caseStudy.title}
 								</Heading>
@@ -61,6 +75,7 @@ function CaseStudyListItem({caseStudy}: {caseStudy: CaseStudy}) {
 					</VStack>
 					<VStack>
 						<Image
+							w={{base: "80%", md: "90%", lg: "100%"}} h={"auto"}
 							boxShadow={"rgba(0, 0, 0, 0.2) 0px 25px 20px -20px;"}
 							src={caseStudy.image} alt={caseStudy.imageDescription}/>
 					</VStack>

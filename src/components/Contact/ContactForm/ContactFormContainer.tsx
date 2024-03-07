@@ -1,4 +1,4 @@
-import {VStack, Grid, Heading, Divider} from "@chakra-ui/react";
+import {VStack, Grid, Heading, Divider, Box} from "@chakra-ui/react";
 import ContactForm from "./ContactForm.tsx";
 import ContactEmail from "./ContactEmail.tsx";
 
@@ -8,7 +8,7 @@ function ContactFormContainer() {
 			<Grid
 				zIndex={2}
 				position={"relative"}
-				gridTemplateColumns={"1fr 1fr"}
+				gridTemplateColumns={{base: "1fr", md: "1fr 1fr"}}
 				alignItems={"center"}
 				w={"100%"}>
 				<VStack
@@ -27,7 +27,9 @@ function ContactFormContainer() {
 					<Divider borderWidth={2} maxWidth={"80px"} my={3} borderColor={"#56C9C2"}/>
 					<ContactForm />
 				</VStack>
-				<ContactEmail />
+				<Box order={{base: -1, md: 2}}>
+					<ContactEmail />
+				</Box>
 			</Grid>
 		</>
 	)
