@@ -20,7 +20,7 @@ function CaseStudyListItem({caseStudy}: {caseStudy: CaseStudy}) {
 				<Grid
 					px={{base: 5, md: 8, lg: 10}}
 					gap={{base: 4, md: 6, lg: 20}}
-					maxHeight={"90vh"}
+					maxHeight={{base: "none", md: "90vh", lg: "100vh"}}
 					gridTemplateColumns={{base: "1fr", md:"1fr auto", lg: "1fr minmax(300px,500px)"}}
 				>
 					<VStack

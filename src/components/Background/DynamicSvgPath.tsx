@@ -42,7 +42,7 @@ const DynamicSvgPath = ({ start, points, end, color = "currentColor" }: DynamicS
 	const viewBoxHeight = Math.max(...yValues as number[]);
 	
 	return (
-		<svg width="100%" height="auto" viewBox={`0 0 ${viewBoxWidth} ${viewBoxHeight}`} preserveAspectRatio="none">
+		<svg width="100%" height="100%" viewBox={`0 0 ${viewBoxWidth} ${viewBoxHeight}`} preserveAspectRatio="none">
 			<path d={pathD} fill={color} />
 		</svg>
 	);

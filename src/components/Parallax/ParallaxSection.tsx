@@ -12,7 +12,7 @@ function ParallaxSection({children, containerProps}: {children: ReactNode, conta
 			<Grid
 				w={"100%"}
 				minH={"100vh"}
-				h={{base: "fit-content", md: "100vh"}}
+				h={{base: "auto", md: "100vh"}}
 				sx={{
 					"scroll-snap-align": "center",
 					"perspective": "500px"

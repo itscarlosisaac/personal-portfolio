@@ -24,9 +24,11 @@
 			background: #86EDC3;
 		}
 		
-		html {
-			scroll-snap-type: y mandatory;
-			overflow-x: hidden;
+		@media screen and (min-width: 48em) {
+			html {
+				scroll-snap-type: y mandatory;
+				overflow-x: hidden;
+			}
 		}
 		
 		body {
