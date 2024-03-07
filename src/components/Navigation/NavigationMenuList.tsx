@@ -1,28 +1,12 @@
 import {Text, HStack} from "@chakra-ui/react";
+import useNavigationLinks from "./useNavigationLinks.tsx";
 
 function NavigationMenuList() {
 	
-	const handleScroll = (to: string) => {
-		document.querySelector(to)?.scrollIntoView({ behavior: 'smooth' });
-	}
-	
-	const links = [
-		{
-			url: "about",
-			label: "About",
-		},
-		{
-			url: "case-studies",
-			label: "Projects",
-		},
-		{
-			url: "contact",
-			label: "Contact",
-		},
-	]
-	
+	const { navigationLinks, handleScroll } = useNavigationLinks()
 	return (
 		<HStack
+			display={{base: "none", md: "flex"}}
 			h={"100%"}
 			alignItems={"center"}
 			justifyContent={"flex-end"}
@@ -32,9 +16,11 @@ function NavigationMenuList() {
 			fontSize={"14px"}
 		>
 			{
-				links.map((link) => {
+				navigationLinks.map((link) => {
 					return (
-						<Text cursor={"pointer"} fontWeight={500}
+						<Text
+							sx={{_hover:{color: "#56C9C2"}}}
+							cursor={"pointer"} fontWeight={500}
 							key={link.url}
 							onClick={() => handleScroll(`#${link.url}`)}
 						>{link.label}</Text>
