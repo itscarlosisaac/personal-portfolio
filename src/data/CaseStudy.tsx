@@ -19,7 +19,7 @@ const case_studies_list: CaseStudy[] = [
 			</Text>
 		</>,
 		date: "2021-01-01",
-		image: "/image.png",
+		image: "/Cargo-Thumbnail.png",
 		imageDescription: "Image description for case study 1",
 		url: "https://kitbash3d.com/pages/cargo",
 		tags: ["react", "node", "electron", "redux", "typescript", "C#", ".NET", "SQL", ],
@@ -51,7 +51,7 @@ const case_studies_list: CaseStudy[] = [
 			</Text>
 		</>,
 		date: "2021-01-01",
-		image: "/image.png",
+		image: "/Ecommerce-Thumbnail.png",
 		imageDescription: "Image description for case study 2",
 		url: "https://kitbash3d.com/",
 		tags: ["html5", "CSS3", "SASS", "javascript", "liquid api", "shopify", "grapql", "responsive design", "rest api"],
