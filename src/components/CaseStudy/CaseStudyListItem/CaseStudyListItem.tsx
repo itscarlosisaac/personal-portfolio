@@ -1,4 +1,4 @@
-import {HStack, VStack, Text, Heading, Divider, Grid, Image, Button, Flex, Box} from "@chakra-ui/react";
+import {HStack, VStack, Heading, Divider, Grid, Image, Button, Flex, Box} from "@chakra-ui/react";
 // import {useRef} from "react";
 // import {useScroll} from "framer-motion";
 // import useParallax from "../../../hooks/animations/useParallax.ts";
@@ -54,9 +54,12 @@ function CaseStudyListItem({caseStudy}: {caseStudy: CaseStudy}) {
 								</Heading>
 							</VStack>
 						</HStack>
-						<Divider w={"70px"} my={5} opacity={1} border={"2px solid"} borderColor={caseStudy.color}/>
+						<Divider
+							w={{base: "30px", md: "50px", lg: "70px"}}
+							my={{base: 2, md: 4, lg: 6}}
+							opacity={1} border={"2px solid"} borderColor={caseStudy.color}/>
 						<VStack as={"article"} alignItems={"flex-start"} gap={5}>
-							<Text>{caseStudy.description}</Text>
+							{caseStudy.description}
 							<CaseStudyTags tags={caseStudy.tags} />
 							<Button
 								href={caseStudy.url} target={"_blank"} rel={"noopener noreferrer"}

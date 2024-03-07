@@ -6,8 +6,8 @@ function NavigatorHandle() {
 		<>
 			<Flex
 				zIndex={1000}
-				h={"60px"}
-				w={"40px"}
+				h={{base: "30px", md: "60px"}}
+				w={{base: "20px", md: "40px"}}
 				borderRadius={"100px"}
 				border={"2px solid"}
 				borderColor={"white"}
@@ -16,6 +16,7 @@ function NavigatorHandle() {
 				left={"50%"}
 				justifyContent={"center"}
 				alignItems={"flex-end"}
+				bg={{base: "rgba(8,6,28,0.2)", md: "transparent"}}
 			>
 				<motion.div
 					transition={{
@@ -29,7 +30,9 @@ function NavigatorHandle() {
 					}}>
 					<Box
 						opacity={1}
-						w={"8px"} h={"16px"} borderRadius={"100px"} bg={"white"} />
+						w={{base: "4px", md: "8px"}}
+						h={{base: "8px", md: "16px"}}
+						borderRadius={"100px"} bg={"white"} />
 				</motion.div>
 			</Flex>
 		</>

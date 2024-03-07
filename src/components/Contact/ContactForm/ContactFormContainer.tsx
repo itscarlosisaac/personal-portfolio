@@ -12,7 +12,9 @@ function ContactFormContainer() {
 				alignItems={"center"}
 				w={"100%"}>
 				<VStack
-					p={10} borderRadius={10}
+					mx={{base: 4, md: 10}}
+					p={{base: 4, md: 10}}
+					borderRadius={10}
 					alignItems={"flex-start"}
 					bg={"white"}
 					boxShadow={`
@@ -20,11 +22,20 @@ function ContactFormContainer() {
 						rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
 						rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 					`}
+					gap={{base: 2, md: 4}}
 					flexGrow={2}>
 					<Heading
-						as={"h4"} fontWeight={500} fontFamily={"body"}
-						fontSize={"xl"}>Send a Message</Heading>
-					<Divider borderWidth={2} maxWidth={"80px"} my={3} borderColor={"#56C9C2"}/>
+						as={"h4"}
+						fontWeight={500}
+						fontFamily={"body"}
+						fontSize={"xl"}>
+						Send a Message
+					</Heading>
+					<Divider
+						my={{base: 1, md: 3}}
+						borderWidth={2}
+						maxWidth={"80px"}
+						borderColor={"#56C9C2"}/>
 					<ContactForm />
 				</VStack>
 				<Box order={{base: -1, md: 2}}>

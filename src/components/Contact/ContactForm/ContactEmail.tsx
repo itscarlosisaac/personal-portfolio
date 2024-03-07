@@ -6,7 +6,7 @@ function ContactEmail() {
 			<VStack
 				px={10} w={"100%"}
 				py={{base: 4, md: 0}}
-				flexDir={{base: "column-reverse", md: "column-reverse"}}
+				flexDir={{base: "column-reverse", md: "column"}}
 				maxW={"490px"} alignItems={"flex-start"}>
 				<Text
 					fontSize={{base: "sm", md: "lg"}}
