@@ -1,41 +1,47 @@
-import NavigationMenuListItem from "./NavigationMenuListItem.tsx";
-import {VStack, Text} from "@chakra-ui/react";
-import case_studies_list from "../../data/CaseStudy.tsx";
-import MailIcon from "../Icons/MailIcon.tsx";
+import {Text, HStack} from "@chakra-ui/react";
 
 function NavigationMenuList() {
 	
-	return (
-		<VStack
-			mt={"-30px"}
-			alignItems={"center"}
-			justifyContent={"center"}
-			h={"100%"}
-		>
+	const handleScroll = (to: string) => {
+		document.querySelector(to)?.scrollIntoView({ behavior: 'smooth' });
+	}
+	
+	const links = [
 		{
-			case_studies_list.map((caseStudy) =>
-				<NavigationMenuListItem
-					caseStudy={caseStudy}
-					key={caseStudy.id} />
-			)
-		}
-			<Text
-				onClick={() => {
-					document.querySelector("#contact")?.scrollIntoView({ behavior: 'smooth' });
-				}}
-				cursor={"pointer"}
-				fontWeight={"700"}
-				fontFamily={"Montserrat"}
-				transition={"all easeIn 0.4s"}
-				sx={{
-					_hover: {
-						color: "#86EDC3"
-					}
-				}}
-			>
-				<MailIcon boxSize={6} />
-			</Text>
-		</VStack>
+			url: "about",
+			label: "About",
+		},
+		{
+			url: "case-studies",
+			label: "Projects",
+		},
+		{
+			url: "contact",
+			label: "Contact",
+		},
+	]
+	
+	return (
+		<HStack
+			h={"100%"}
+			alignItems={"center"}
+			justifyContent={"flex-end"}
+			textTransform={"uppercase"}
+			letterSpacing={"1px"}
+			gap={10}
+			fontSize={"14px"}
+		>
+			{
+				links.map((link) => {
+					return (
+						<Text cursor={"pointer"} fontWeight={500}
+							key={link.url}
+							onClick={() => handleScroll(`#${link.url}`)}
+						>{link.label}</Text>
+					)
+				})
+			}
+		</HStack>
 	)
 }
 

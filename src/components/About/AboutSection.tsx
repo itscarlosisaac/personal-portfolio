@@ -5,6 +5,7 @@ function AboutSection() {
 		<>
 			<ParallaxSection
 				containerProps={{
+					id:"about",
 					maxW: {base: "100vw", md: "1600px"},
 					px: {base: "20px", md: "40px"},
 				}}
@@ -18,7 +19,7 @@ function AboutSection() {
 					>
 						<Heading as={"h2"}>Hi,</Heading>
 						<Heading as={"h3"}>
-							I'm Carlos, weaving creativity and tech to solve complex problems with simple, user-focused digital solutions.
+							I'm Carlos, fusing creativity and tech to solve complex problems with simple, user-focused digital solutions.
 						</Heading>
 						<Text>
 							Passionate front-end developer with 8+ years of experience, proficient in HTML, CSS, and JavaScript, using the latest web technologies, such as React, Node, Vue, Ember and more. I specialize in writing simple, scalable, and reusable code, following best engineering practices such as data structures, algorithms, unit testing, code reviews, documentation, debugging, and agile development.
