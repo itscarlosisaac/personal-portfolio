@@ -1,7 +1,7 @@
 import {HStack, VStack, Text, Heading, Divider, Grid, Image, Button, Flex, Box} from "@chakra-ui/react";
-import {useRef} from "react";
-import {useScroll} from "framer-motion";
-import useParallax from "../../../hooks/animations/useParallax.ts";
+// import {useRef} from "react";
+// import {useScroll} from "framer-motion";
+// import useParallax from "../../../hooks/animations/useParallax.ts";
 import ParallaxSection from "../../Parallax/ParallaxSection.tsx";
 import {ArrowForwardIcon} from "@chakra-ui/icons";
 import {CaseStudy} from "../../../types/case.study.types.ts";

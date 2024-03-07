@@ -1,12 +1,12 @@
 import {Box, Image} from "@chakra-ui/react";
-import {motion, useMotionValue, useMotionValueEvent} from "framer-motion";
+import {motion, useMotionValue, useMotionValueEvent, Variants} from "framer-motion";
 import MascotPopup from "./MascotPopup.tsx";
 import {useState} from "react";
 
 function Mascot() {
 	
 	const yPosition = useMotionValue(70)
-	const variants = {
+	const variants: Variants = {
 		init: { scale: 0},
 		animate: {
 			transition: {
@@ -20,7 +20,7 @@ function Mascot() {
 			scale: 1
 		}
 	}
-	const deno_variants = {
+	const deno_variants: Variants = {
 		init: { y: -200},
 		animate: {
 			transition: {

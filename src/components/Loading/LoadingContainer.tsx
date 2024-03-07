@@ -1,10 +1,9 @@
 import {Box, Image} from "@chakra-ui/react";
-import {motion, useAnimation} from "framer-motion";
-import LoadingParticles from "./LoadingParticles.tsx";
+import {motion, Variants} from "framer-motion";
 import LoadingCloud from "./LoadingCloud.tsx";
 
 
-const parentVariant = {
+const parentVariant: Variants = {
 	anim: {
 		rotate: [-.4, .3, -.4],
 		x: [2, 1, 1],

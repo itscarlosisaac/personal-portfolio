@@ -1,18 +1,7 @@
 import {Box, Flex} from "@chakra-ui/react";
-import {ArrowDownIcon} from "@chakra-ui/icons";
 import {motion} from "framer-motion";
 
 function NavigatorHandle() {
-	
-	const animation_variant = {
-		init: {
-			y:0
-		},
-		animate: {
-			y: -20,
-		}
-	}
-	
 	return (
 		<>
 			<Flex
@@ -41,7 +30,6 @@ function NavigatorHandle() {
 					<Box
 						opacity={1}
 						w={"8px"} h={"16px"} borderRadius={"100px"} bg={"white"} />
-					{/*<ArrowDownIcon color={"#0175A2"} boxSize={5} />*/}
 				</motion.div>
 			</Flex>
 		</>

@@ -13,7 +13,7 @@ function LoadingParticles() {
 		});
 	}, []);
 	
-	const particlesLoaded = (container) => {
+	const particlesLoaded = async (container: unknown) => {
 		console.log(container);
 	};
 	

@@ -1,4 +1,4 @@
-import {Box, Grid, VStack} from "@chakra-ui/react";
+import {Grid, VStack} from "@chakra-ui/react";
 import CaseStudyContainer from "../components/CaseStudy/CaseStudyContainer.tsx";
 import NavigationContainer from "../components/Navigation/NavigationContainer.tsx";
 import HeroBanner from "../components/HeroBanner/HeroBanner.tsx";

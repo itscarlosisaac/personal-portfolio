@@ -1,11 +1,19 @@
 // Define the component with props for the start point, points array, and end point
-const DynamicSvgPath = ({ start, points, end, color = "currentColor" }) => {
+
+type Point = { x?: number, y?: number, type?: string  }
+type DynamicSvgPathProps = {
+	start: Point,
+	end: Point,
+	points: Point[]
+	color: string
+}
+const DynamicSvgPath = ({ start, points, end, color = "currentColor" }: DynamicSvgPathProps) => {
 	// Initial commands
 	const moveCommand = `M${start.x} ${start.y}`;
 	
 	// Generate commands from points
 	const pointsCommands = points.map(point => {
-		switch (point.type.toUpperCase()) {
+		switch (point?.type?.toUpperCase()) {
 			case 'V': // Vertical line
 				return `V${point.y}`;
 			case 'H': // Horizontal line
@@ -30,8 +38,8 @@ const DynamicSvgPath = ({ start, points, end, color = "currentColor" }) => {
 	const yValues = points.filter(p => p.y !== undefined).map(p => p.y);
 	yValues.push(start.y, end.y);
 	
-	const viewBoxWidth = Math.max(...xValues);
-	const viewBoxHeight = Math.max(...yValues);
+	const viewBoxWidth = Math.max(...xValues as number[]);
+	const viewBoxHeight = Math.max(...yValues as number[]);
 	
 	return (
 		<svg width="100%" height="auto" viewBox={`0 0 ${viewBoxWidth} ${viewBoxHeight}`} preserveAspectRatio="none">
