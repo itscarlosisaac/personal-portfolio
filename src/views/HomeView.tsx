@@ -6,6 +6,7 @@ import Contact from "../components/Contact/Contact.tsx";
 import MascotContainer from "../components/Mascot/MascotContainer.tsx";
 import NavigatorHandle from "../components/NavigatorHandle/NavigatorHandle.tsx";
 import SocialMenu from "../components/SocialMenu/SocialMenu.tsx";
+import AboutSection from "../components/About/AboutSection.tsx";
 
 function HomeView() {
 
@@ -16,6 +17,7 @@ function HomeView() {
 			<SocialMenu />
 			<VStack >
 				<HeroBanner />
+				<AboutSection />
 				<CaseStudyContainer />
 				<Contact />
 			</VStack>
