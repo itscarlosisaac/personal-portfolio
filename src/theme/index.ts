@@ -8,6 +8,18 @@ Abbey #474A51
  */
 const overwrites = {
 	components: {
+		Alert: {
+			variants: {
+				// define own toast variant
+				toast: {
+					container: {
+						color: "gray.50",
+						bg: "#3d918d",
+						maxWidth: "350px",
+					}
+				}
+			}
+		},
 		Button: {
 			baseStyle: {
 				borderRadius: 0,
