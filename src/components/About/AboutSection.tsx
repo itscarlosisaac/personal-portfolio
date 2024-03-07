@@ -1,5 +1,6 @@
 import ParallaxSection from "../Parallax/ParallaxSection.tsx";
 import {Grid, Heading, HStack, Image, Text, VStack} from '@chakra-ui/react';
+import SocialMenu from "../SocialMenu/SocialMenu.tsx";
 function AboutSection() {
 	return (
 		<>
@@ -28,6 +29,7 @@ function AboutSection() {
 						<Text>
 							I'm all about learning new frameworks and pushing the boundaries of web development to create even cooler stuff. If you want to know more about me or just chat about your favorite dinosaur mosasaurus, shoot me an email at <Text color={"#EA937A"} as={"a"} href={"mailto:itscarlosisaac@gmail.com"}>itscarlosisaac@gmail.com</Text>. Let's connect and make the web a more awesome place together!
 						</Text>
+						<SocialMenu />
 					</VStack>
 					<HStack>
 						<Image src={"/profile.png"} />
