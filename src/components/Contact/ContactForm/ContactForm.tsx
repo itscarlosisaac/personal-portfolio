@@ -1,4 +1,4 @@
-import {Button, Flex, FormControl, FormErrorMessage, FormLabel, Input, Textarea, VStack} from "@chakra-ui/react";
+import {Box, Button, Flex, FormControl, FormErrorMessage, FormLabel, Input, Textarea} from "@chakra-ui/react";
 import RocketIcon from "../../Icons/RocketIcon.tsx";
 import {FormEvent, useState} from "react";
 import * as yup from 'yup';
@@ -57,7 +57,8 @@ function ContactForm() {
 				duration: 3000,
 				isClosable: true,
 			})
-			document.querySelector("#contact-form")?.reset()
+			const form =  document.querySelector("#contact-form") as HTMLFormElement
+			form.reset()
 		} catch (err) {
 			const error = err as Error;
 			const [key, value] = error.message.split(":")
@@ -74,58 +75,66 @@ function ContactForm() {
 	
 	return (
 		<>
-			<VStack
-				id={"contact-form"}
-				gap={{base: 2, md:4}}
-				as={"form"} w={"100%"}
-				onSubmit={handleFormSubmit} >
-				<Flex gap={{base: 2, md:4}}>
-					<FormControl isInvalid={!!errors["name"]}>
-						<FormLabel fontSize={{base: "sm", md: "md"}}>Name</FormLabel>
-						<Input
-							name={"name"}
-							size={{base: "sm", md: "md"}}
-							type='text' placeholder={"John Hammond"} />
-						<FormErrorMessage>{errors["name"]}</FormErrorMessage>
+			<Box
+				m={{base: 2, md: 4}}
+			>
+				<form
+					style={{
+						flexDirection: "column",
+						width: "100%",
+						display: "flex",
+						gap: "1rem",
+					}}
+					id={"contact-form"}
+					onSubmit={handleFormSubmit} >
+					<Flex gap={{base: 2, md:4}}>
+						<FormControl isInvalid={!!errors["name"]}>
+							<FormLabel fontSize={{base: "sm", md: "md"}}>Name</FormLabel>
+							<Input
+								name={"name"}
+								size={{base: "sm", md: "md"}}
+								type='text' placeholder={"John Hammond"} />
+							<FormErrorMessage>{errors["name"]}</FormErrorMessage>
+						</FormControl>
+						<FormControl isInvalid={!!errors["subject"]}>
+							<FormLabel fontSize={{base: "sm", md: "md"}}>Subject</FormLabel>
+							<Input
+								name={"subject"}
+								size={{base: "sm", md: "md"}} type='text' placeholder={"Park breakout"} />
+							<FormErrorMessage>{errors["subject"]}</FormErrorMessage>
+						</FormControl>
+					</Flex>
+					<FormControl isInvalid={!!errors["email"]}>
+						<FormLabel fontSize={{base: "sm", md: "md"}}>Email address</FormLabel>
+						<Input name={"email"}
+							size={{base: "sm", md: "md"}} type='email' placeholder={"jonh.hammond@jpark.com"} />
+						<FormErrorMessage>{errors["email"]}</FormErrorMessage>
 					</FormControl>
-					<FormControl isInvalid={!!errors["subject"]}>
-						<FormLabel fontSize={{base: "sm", md: "md"}}>Subject</FormLabel>
-						<Input
-							name={"subject"}
-							size={{base: "sm", md: "md"}} type='text' placeholder={"Park breakout"} />
-						<FormErrorMessage>{errors["subject"]}</FormErrorMessage>
+					<FormControl isInvalid={!!errors["message"]}>
+						<FormLabel fontSize={{base: "sm", md: "md"}}>Message</FormLabel>
+						<Textarea name={"message"}
+							size={{base: "sm", md: "md"}} resize={"none"} placeholder={"Life find its way."} />
+						<FormErrorMessage>{errors["message"]}</FormErrorMessage>
 					</FormControl>
-				</Flex>
-				<FormControl isInvalid={!!errors["email"]}>
-					<FormLabel fontSize={{base: "sm", md: "md"}}>Email address</FormLabel>
-					<Input name={"email"}
-						size={{base: "sm", md: "md"}} type='email' placeholder={"jonh.hammond@jpark.com"} />
-					<FormErrorMessage>{errors["email"]}</FormErrorMessage>
-				</FormControl>
-				<FormControl isInvalid={!!errors["message"]}>
-					<FormLabel fontSize={{base: "sm", md: "md"}}>Message</FormLabel>
-					<Textarea name={"message"}
-						size={{base: "sm", md: "md"}} resize={"none"} placeholder={"Life find its way."} />
-					<FormErrorMessage>{errors["message"]}</FormErrorMessage>
-				</FormControl>
-				<FormControl isInvalid={!!errors["global"]}>
-					<Button
-						w={"full"}
-						h={{base: "36px", md: "48px"}}
-						fontSize={{base: "12px", md: "md"}}
-						mt={{base: 2, md: 4}}
-						gap={4}
-						colorScheme='teal'
-						type='submit' isLoading={formState === "loading"}
-						bg={"#56C9C2"}
-						sx={{_hover: { bg: '#3d918d' }}}
-					>
-						<span>Send Message</span>
-						<RocketIcon boxSize={8} color={"white"} />
-					</Button>
-					<FormErrorMessage>{errors["global"]}</FormErrorMessage>
-				</FormControl>
-			</VStack>
+					<FormControl isInvalid={!!errors["global"]}>
+						<Button
+							w={"full"}
+							h={{base: "36px", md: "48px"}}
+							fontSize={{base: "12px", md: "md"}}
+							mt={{base: 2, md: 4}}
+							gap={4}
+							colorScheme='teal'
+							type='submit' isLoading={formState === "loading"}
+							bg={"#56C9C2"}
+							sx={{_hover: { bg: '#3d918d' }}}
+						>
+							<span>Send Message</span>
+							<RocketIcon boxSize={8} color={"white"} />
+						</Button>
+						<FormErrorMessage>{errors["global"]}</FormErrorMessage>
+					</FormControl>
+				</form>
+			</Box>
 		</>
 	)
 }
