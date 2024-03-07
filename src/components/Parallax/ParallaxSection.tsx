@@ -17,7 +17,7 @@ function ParallaxSection({children, containerProps}: {children: ReactNode, conta
 					"scroll-snap-align": "center",
 					"perspective": "500px"
 				}}
-				overflow={"hidden"}
+				overflow={{base: "visible", md: "hidden"}}
 				alignContent={"center"}
 				justifyContent={"center"}
 				as={"section"}
