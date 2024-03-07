@@ -26,11 +26,11 @@ function AboutSection() {
 						</Text>
 						
 						<Text>
-							I am always eager to learn new skills, collaborate with others, and deliver high-quality products that meet the needs and expectations of the users.
+							I'm all about learning new frameworks and pushing the boundaries of web development to create even cooler stuff. If you want to know more about me or just chat about your favorite dinosaur mosasaurus, shoot me an email at <Text color={"#EA937A"} as={"a"} href={"mailto:itscarlosisaac@gmail.com"}>itscarlosisaac@gmail.com</Text>. Let's connect and make the web a more awesome place together!
 						</Text>
 					</VStack>
 					<HStack>
-						<Image src={"/Cargo-Thumbnail.png"} />
+						<Image src={"/profile.png"} />
 					</HStack>
 				</Grid>
 			</ParallaxSection>
