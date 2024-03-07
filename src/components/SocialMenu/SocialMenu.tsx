@@ -5,13 +5,21 @@ import LinkedInIcon from "../Icons/LinkedInIcon.tsx";
 function SocialMenu() {
 	
 	const socialLinks = [
-		{name: "GitHub", url: "https://github.com/itscarlosisaac", icon: <GithubIcon color="white" boxSize={4} />},
-		{name: "LinkedIn", url: "https://www.linkedin.com/in/cisaacmb/", icon: <LinkedInIcon color="white" boxSize={4} />},
+		{
+			name: "GitHub",
+			url: "https://github.com/itscarlosisaac",
+			icon: <GithubIcon _hover={{color: "#56C9C2"}} color="#cecece" boxSize={7} />
+		},
+		{
+			name: "LinkedIn",
+			url: "https://www.linkedin.com/in/cisaacmb/",
+			icon: <LinkedInIcon  _hover={{color: "#57C9C2"}} color="#cecece" boxSize={6} />
+		},
 	]
 	
 	return (
 		<>
-			<Flex position={"fixed"} top={"20px"} right={"15px"} zIndex={90}>
+			<Flex>
 				{
 					socialLinks.map((link, index) => {
 						return (
@@ -23,16 +31,9 @@ function SocialMenu() {
 								key={index}
 								w={"36px"}
 								h={"36px"}
-								borderRadius={"100px"}
-								bg={"#EA937A"}
 								justifyContent={"center"}
 								alignItems={"center"} mx={2}
 								transition={"0.3s"}
-								sx={{
-									_hover: {
-										bg: "#8c543a"
-									}
-								}}
 							>
 								{link.icon}
 							</Flex>

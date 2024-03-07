@@ -3,7 +3,7 @@ import DynamicSvgPath from "../components/Background/DynamicSvgPath.tsx";
 import { Text } from '@chakra-ui/react';
 
 const styles = {
-	fontSize:"15px",
+	fontSize: "1em",
 	mb: 1
 }
 
@@ -14,7 +14,7 @@ const case_studies_list: CaseStudy[] = [
 		company: "Kitbash3D",
 		title: "Cargo Application",
 		description: <>
-			<Text>
+			<Text {...styles}>
 				Cargo, an Eletron Desktop Application that allows the user to connect to a 3d software, download and import assets. The application was built using Typescript and React in their ui core. As a front end developer, my focus was on building a fast and intuitive Ui that would allow the user to quickly navigate through the application, connect and download the assets they need.
 			</Text>
 		</>,

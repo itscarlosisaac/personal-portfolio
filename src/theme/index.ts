@@ -36,10 +36,11 @@ const overwrites = {
 		},
 		Text: {
 			baseStyle: {
-				color: "#08061C",
+				color: "#42426b",
 				fontFamily:'"Roboto", sans-serif',
 				fontWeight: "400",
 				lineHeight: "1.8",
+				fontSize: "1em",
 			}
 		}
 	}
