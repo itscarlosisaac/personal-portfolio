@@ -4,10 +4,10 @@ import Mascot from "./Mascot.tsx";
 function MascotContainer() {
 	
 	const responsive_styles = {
-		transform: {base: "scale(0.7)", md: "none"},
+		transform: {base: "scale(0.6)", md: "none"},
 		position: {base: "fixed", md : "none"},
 		right: {base: "0", md : "none"},
-		bottom: {base: "-50px", md : "none"},
+		bottom: {base: "-60px", md : "none"},
 		width: {base: "100px", md : "none"}
 	}
 	
