@@ -33,7 +33,7 @@ function ContactFormContainer() {
 					</Heading>
 					<Divider
 						my={{base: 1, md: 3}}
-						borderWidth={2}
+						borderWidth={1}
 						maxWidth={"80px"}
 						borderColor={"#56C9C2"}/>
 					<ContactForm />

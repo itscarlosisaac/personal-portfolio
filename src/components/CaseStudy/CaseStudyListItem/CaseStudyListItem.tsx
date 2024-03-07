@@ -1,4 +1,4 @@
-import {HStack, VStack, Heading, Divider, Grid, Image, Button, Flex, Box} from "@chakra-ui/react";
+import {HStack, VStack, Heading, Grid, Image, Button, Flex, Box} from "@chakra-ui/react";
 import ParallaxSection from "../../Parallax/ParallaxSection.tsx";
 import {ArrowForwardIcon} from "@chakra-ui/icons";
 import {CaseStudy} from "../../../types/case.study.types.ts";
@@ -13,6 +13,7 @@ function CaseStudyListItem({caseStudy}: {caseStudy: CaseStudy}) {
 					id: `case-study-${caseStudy.slug}`,
 				}}>
 					<Grid
+						py={{base: 6, md: 0 }}
 						px={{base: 5, md: 8, lg: 10}}
 						gap={{base: 4, md: 6, lg: 20}}
 						maxHeight={{base: "none", md: "90vh", lg: "100vh"}}
@@ -23,7 +24,7 @@ function CaseStudyListItem({caseStudy}: {caseStudy: CaseStudy}) {
 							justifyContent={"center"}
 							alignItems={"flex-start"}
 							as={"article"}>
-							<HStack>
+							<HStack mb={{base:2, md: 5}}>
 									<VStack fontWeight={"900"} alignItems={"center"}>
 										<Heading
 											fontSize={{base: "7px", md: "10px", lg: "14px"}}
@@ -50,10 +51,6 @@ function CaseStudyListItem({caseStudy}: {caseStudy: CaseStudy}) {
 									</VStack>
 							</HStack>
 							
-							<Divider
-								w={{base: "30px", md: "50px", lg: "70px"}}
-								my={{base: 2, md: 4, lg: 6}}
-								opacity={1} border={"2px solid"} borderColor={caseStudy.color}/>
 							<VStack as={"article"} alignItems={"flex-start"} gap={5}>
 								{caseStudy.description}
 								<CaseStudyTags tags={caseStudy.tags} />
