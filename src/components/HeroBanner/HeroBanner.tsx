@@ -59,7 +59,7 @@ function HeroBanner() {
 							</Text>
 							<Grid
 								gridTemplateColumns={{ base: "1fr", md: "110px 1fr"}}>
-								<HStack mb={{base:3, md: "none"}}>
+								<HStack mb={{base:3, md: "0"}}>
 									<Text fontWeight={600}>Tech Stack</Text>
 									<Center display={{base: "none", md: "block"}} height='30px' mx={1}>
 										<Divider orientation='vertical' borderColor={"#474A51"}/>
