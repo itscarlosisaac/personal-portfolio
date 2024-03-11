@@ -12,7 +12,7 @@ const case_studies_list: CaseStudy[] = [
 		id: 1,
 		slug: 'cargo-application',
 		company: "Kitbash3D",
-		title: "Cargo Application",
+		title: "Cargo App",
 		description: <>
 			<Text {...styles}>
 				Cargo, an Eletron Desktop Application that allows the user to connect to a 3d software, download and import assets. The application was built using Typescript and React in their ui core. As a front end developer, my focus was on building a fast and intuitive Ui that would allow the user to quickly navigate through the application, connect and download the assets they need.
@@ -41,7 +41,7 @@ const case_studies_list: CaseStudy[] = [
 		id: 2,
 		slug: "ecommerce-website",
 		company: "Kitbash3D",
-		title: "Ecommerce Website",
+		title: "E-commerce Web",
 		description: <>
 			<Text {...styles}>
 				As a front-end developer, my role focused on a comprehensive redesign of an e-commerce website to enhance user experience. I implemented responsive design principles using web technologies for optimal viewing on various devices. My work included improving site navigation and streamlining the checkout process to boost conversion rates.

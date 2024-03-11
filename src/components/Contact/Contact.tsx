@@ -1,7 +1,7 @@
 import ParallaxSection from "../Parallax/ParallaxSection.tsx";
 import ContactFormContainer from "./ContactForm/ContactFormContainer.tsx";
 import DynamicSvgPath from "../Background/DynamicSvgPath.tsx";
-import {Box, Text, VStack} from "@chakra-ui/react";
+import {Box, Container, Text, VStack} from "@chakra-ui/react";
 import {useEffect, useRef} from "react";
 import {useInView} from "framer-motion";
 import {eventBus} from "../../EventBus/EventBus.ts";
@@ -34,25 +34,28 @@ function Contact() {
 			<ParallaxSection
 				containerProps={{
 					id: "contact",
+					maxW: {base: "100vw", md: "1600px"},
 				}}
 			>
-				<Box ref={ref}>
-				<ContactFormContainer />
+				<Container maxW='6xl' w={"100%"}>
+					<Box ref={ref}>
+					<ContactFormContainer />
 					<Box zIndex={-1} position={"absolute"} left={"0"} bottom="0" w="100%" h="100vh" pointerEvents={"none"}>
-						<DynamicSvgPath
-							start={{x:0, y: 0}}
-							points={
-								[
-									{ type: 'V', y: 400},
-									{ type: 'H', x: 20 },
-									{ type: 'V', y: 200 }
-								]
-							}
-							end={{x:0, y: 400}}
-							color={"rgb(30,22,91)"}
-						/>
+							<DynamicSvgPath
+								start={{x:0, y: 0}}
+								points={
+									[
+										{ type: 'V', y: 400},
+										{ type: 'H', x: 20 },
+										{ type: 'V', y: 200 }
+									]
+								}
+								end={{x:0, y: 400}}
+								color={"rgb(30,22,91)"}
+							/>
+						</Box>
 					</Box>
-				</Box>
+				</Container>
 			</ParallaxSection>
 		</>
 	)

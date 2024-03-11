@@ -12,7 +12,7 @@ function ContactFormContainer() {
 				alignItems={"center"}
 				w={"100%"}>
 				<VStack
-					mx={{base: 4, md: 10}}
+					mx={{base: 4}}
 					p={{base: 4, md: 10}}
 					borderRadius={10}
 					alignItems={"flex-start"}

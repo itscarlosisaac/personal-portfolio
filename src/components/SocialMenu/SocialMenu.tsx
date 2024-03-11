@@ -1,6 +1,7 @@
 import {Flex} from "@chakra-ui/react";
 import GithubIcon from "../Icons/GithubIcon.tsx";
 import LinkedInIcon from "../Icons/LinkedInIcon.tsx";
+import MediumIcon from "../Icons/MediumIcon.tsx";
 
 function SocialMenu() {
 	
@@ -15,6 +16,11 @@ function SocialMenu() {
 			url: "https://www.linkedin.com/in/cisaacmb/",
 			icon: <LinkedInIcon  _hover={{color: "#57C9C2"}} color="#cecece" boxSize={6} />
 		},
+		{
+			name: "Medium",
+			url: 'https://medium.com/@itscarlosisaac',
+			icon: <MediumIcon  _hover={{color: "#57C9C2"}} color="#cecece" boxSize={6} />
+		}
 	]
 	
 	return (

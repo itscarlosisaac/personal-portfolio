@@ -20,7 +20,7 @@ function NavigationMenuList() {
 					return (
 						<Text
 							sx={{_hover:{color: "#56C9C2"}}}
-							cursor={"pointer"} fontWeight={500}
+							cursor={"pointer"} fontWeight={700}
 							key={link.url}
 							onClick={() => handleScroll(`#${link.url}`)}
 						>{link.label}</Text>

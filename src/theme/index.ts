@@ -30,14 +30,15 @@ const overwrites = {
 		},
 		Heading: {
 			baseStyle: {
-				fontFamily:'"Montserrat", sans-serif',
-				fontWeight: "200",
+				fontFamily:' "Work Sans", sans-serif',
+				fontWeight: "500",
+				color: "#42426b",
 			},
 		},
 		Text: {
 			baseStyle: {
 				color: "#42426b",
-				fontFamily:'"Roboto", sans-serif',
+				fontFamily:'"Open Sans", sans-serif',
 				fontWeight: "400",
 				lineHeight: "1.8",
 				fontSize: "1em",
