@@ -7,7 +7,7 @@ function AboutSection() {
 			<ParallaxSection
 				containerProps={{
 					id:"about",
-					maxW: {base: "100vw", md: "1600px"},
+					maxW: {base: "100vw"},
 					px: {base: "20px", md: "40px"},
 				}}
 			>

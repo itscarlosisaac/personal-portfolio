@@ -11,7 +11,7 @@ function CaseStudyListItem({caseStudy}: {caseStudy: CaseStudy}) {
 				<ParallaxSection
 					containerProps={{
 					id: `case-study-${caseStudy.slug}`,
-					maxW: {base: "100vw", md: "1600px"},
+					maxW: {base: "100vw"},
 				}}>
 					
 					<Container maxW='6xl' w={"100%"}>

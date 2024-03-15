@@ -20,7 +20,7 @@ function HeroBanner() {
 					id: "hero-banner",
 					w: "100%",
 					bg: 'url("/bg.svg")',
-					maxW: {base: "100vw", md: "1600px"},
+					maxW: {base: "100vw"},
 					px: {base: "20px", md: "40px"},
 					bgSize: "cover",
 					bgPosition: "center",

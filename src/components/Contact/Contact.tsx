@@ -34,7 +34,7 @@ function Contact() {
 			<ParallaxSection
 				containerProps={{
 					id: "contact",
-					maxW: {base: "100vw", md: "1600px"},
+					maxW: {base: "100vw"},
 				}}
 			>
 				<Container maxW='6xl' w={"100%"}>
